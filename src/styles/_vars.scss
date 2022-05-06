@@ -1,0 +1,14 @@
+$container_width: 1530;
+$container_padding: 15;
+$fz_base: 14;
+
+:root {
+	--fz-prim: #{$fz_base}px;
+	--c-prim: #331a2f;
+	--c-acc: #cf51ce;
+
+	--ff-prim: 'Lato';
+
+	--container-width: #{$container_width}px;
+	--container-padding: #{$container_padding}px;
+}

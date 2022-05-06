@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- STYLES -->
+
+	<link rel="stylesheet" href="./css/main.css">
+	<!-- /STYLES -->
+
+	<!-- SCRIPT -->
+	<script src="//unpkg.com/alpinejs" defer></script>
+	<!-- /SCRIPT -->
+
+	<!-- TITLE -->
+	<title>Главная</title>
+	<!-- /TITLE -->
+</head>
+
+<body x-data="{ active: false }" :style="{ overflow: active ? 'hidden' : 'auto'}">
+	<div class="wrapper">
+		<header class="header header--mb">
+	<div class="container">
+		<div class="header__content">
+			<a class="header__logo logo" href="/">
+				<img src="./images/logo.svg" alt="логотип сайта">
+			</a>
+
+			<div class="header__text">
+				Надежный сервис
+				аналитики для поставщиков
+				на маркетплейсы
+			</div>
+
+			<div class="mobile-menu header__menu" :class="{ hidden: !active }">
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<button class="nav__link">
+								Аналитика
+								<svg class="nav__link-icon" width="13" height="12">
+									<use xlink:href="./images/sprite.svg#arrow-down"></use>
+								</svg>
+							</button>
+
+							<ul class="nav__sub-list">
+								<li class="nav__sub-item">
+									<a class="nav__sub-link" href="#">sub-item</a>
+									<a class="nav__sub-link" href="#">sub-item</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#">Обучение</a>
+						</li>
+					</ul>
+				</nav>
+
+				<a class="header__phone phone" href="tel:+84994503141">
+					<svg class="phone__icon" width="24" height="24">
+						<use xlink:href="./images/sprite.svg#phone"></use>
+					</svg>
+					8 (499) 450-31-41
+				</a>
+			</div>
+
+
+			<a class="header__login" href="#">
+				<svg class="header__login-icon" width="23" height="23">
+					<use xlink:href="./images/sprite.svg#login"></use>
+				</svg>
+				Войти
+			</a>
+
+			<button
+				class="burger"
+				:class="{ active }"
+				@click="active = !active"
+			>
+				<span class="burger__line"></span>
+			</button>
+		</div>
+	</div>
+</header>
+
+
+
+<main class="main">
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs__content">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__link active">
+							Обучение
+						</span>
+					</li>
+				</ul>
+			</div><!-- /.breadcrumbs__content -->
+		</div><!-- /.container -->
+	</div><!-- /.breadcrumbs -->
+
+
+
+	<!-- HERO -->
+	<section class="hero">
+		<div class="container">
+			<div class="hero__content">
+				<h1 class="hero__title">
+					<span class="hero__title-decor">Обучающие курсы</span> для поставщиков&nbsp;на маркетплейсы
+				</h1>
+				<div class="hero__price">
+					<svg class="hero__price-icon" width="48" height="48">
+						<use xlink:href="./images/sprite.svg#price"></use>
+					</svg>
+					<span class="hero__price-text">
+						от <span class="hero__price-num">19 900</span>  ₽
+					</span>
+				</div>
+				<div class="hero__desc desc">
+					<p>Обучающие курсы по работе и продвижению на маркетплейсах от практикующих селлеров</p>
+					<p>
+						Добро пожаловать в Академию. Это место для эффективного обучения, где мы рассказываем, как работают маркетплейсы и никогда не вдаемся
+						в теорию, которая не понадобится на практике.
+					</p>
+					<p>Нащи уроки помогут понять логику работы площадок и взять управление продажами в свои руки, а не действовать наугад. Становись экспертом в работе с маркетплейсами и увеличивай свою прибыль.</p>
+				</div>
+
+				<div class="hero__img">
+					<picture>
+						<source srcset="./images/hero/1-tablet.webp" type="image/webp" media="(max-width: 991px)">
+						<source srcset="./images/hero/1-tablet.png" media="(max-width: 991px)">
+
+						<source srcset="./images/hero/1-mobile.webp" media="(max-width: 480px)">
+						<source srcset="./images/hero/1-mobile.png" media="(max-width: 480px)">
+
+						<source srcset="./images/hero/1.webp" type="image/webp">
+						<img src="./images/hero/1.png" loading="lazy" alt="человек" aria-hidden="true">
+					</picture>
+				</div>
+			</div><!-- /.hero__content -->
+		</div><!-- /.container -->
+	</section><!-- /.hero -->
+	<!-- /HERO -->
+
+
+
+	<!-- TRUST-US -->
+	<section class="trust-us">
+		<div class="container">
+			<div class="trust-us__content">
+				<h2 class="trust-us__title sect-title">
+					<span class="trust-us__title-text">Небольшая предыстория о том, почему нам можно доверять</span>
+				</h2>
+
+				<ul class="trust-us__list">
+					<li class="trust-us__item grid">
+						<div class="trust-us__item-img">
+							<img src="./images/trust-us/1.svg" alt="" aria-hidden="true">
+						</div>
+						<div class="trust-us__item-text desc">
+							<p>Свой путь в бизнесе мы начали в 2016 г. У нас были свои островные магазины в крупных ТЦ Москвы («Европейский», «Метрополис», «Мега» и др.), а также свой интернет-магазин. Мы накопили большой опыт в продвижении своих товаров за счет многочисленных запусков разных рекламных каналов и работы с блогерами.</p>
+						</div>
+					</li>
+					<li class="trust-us__item grid">
+						<div class="trust-us__item-img">
+							<img src="./images/trust-us/2.svg" alt="" aria-hidden="true">
+						</div>
+						<div class="trust-us__item-text desc">
+							<p>Летом 2019 года мы вышли на маркетплейсы и после работы с ними в течение 2 месяцев приняли решение развивать только это направление. И не прогадали. Весь накопленный опыт мы направили на улучшение и продвижение наших брендов.</p>
+							<p>Пришло время поделится знаниями и лайфхаками, которые будут собраны и доступны в нашей Академии stat4market.</p>
+						</div>
+					</li>
+				</ul>
+			</div><!-- /.__content -->
+		</div><!-- /.container -->
+	</section><!-- /. -->
+	<!-- /TRUST-US -->
+
+
+
+	<!-- TRAINING -->
+	<section class="training">
+		<div class="container">
+			<div class="training__content">
+				<h2 class="training__title sect-title">
+					<span class="training__title-text">Обучение по продажам на маркетплейсах от <span class="training__title-underline">stat<span class="training__title-accent">4</span>market</span></span>
+				</h2>
+				<p class="training__desc desc">
+					<span class="training__desc-text">
+						«Увеличение реальной прибыли, конкретика и ключевые инструменты, которые дают результат» — на этом тезисе созданы наши курсы
+					</span>
+				</p>
+
+				<ul class="training__list grid">
+					<li class="training__item">
+						<div class="training__item-icon-wrapper">
+							<svg class="training__item-icon" width="48" height="48">
+								<use xlink:href="./images/sprite.svg#training-1"></use>
+							</svg>
+						</div>
+
+						<h3 class="training__item-title">
+							Наше обучение построено очень лаконично и просто
+						</h3>
+
+						<p class="training__item-desc">
+							Все занятия короткие по продолжительности для легкого восприятия и понимания. Мы даем в уроках только конкретику, без лишней теории и “воды”.
+						</p>
+					</li>
+					<li class="training__item">
+						<div class="training__item-icon-wrapper">
+							<svg class="training__item-icon" width="48" height="48">
+								<use xlink:href="./images/sprite.svg#training-2"></use>
+							</svg>
+						</div>
+
+						<h3 class="training__item-title">
+							Ко всем урокам есть дополнительные материалы
+						</h3>
+
+						<p class="training__item-desc">
+							Презентации, краткие инструкции, чек-листы и памятки по работе с маркетплейсами.
+						</p>
+					</li>
+					<li class="training__item">
+						<div class="training__item-icon-wrapper">
+							<svg class="training__item-icon" width="48" height="48">
+								<use xlink:href="./images/sprite.svg#training-3"></use>
+							</svg>
+						</div>
+
+						<h3 class="training__item-title">
+							Наше обучение — практико-ориентированное
+						</h3>
+
+						<p class="training__item-desc">
+							Поэтому после прохождения уроков ты будешь выполнять задания, которые помогут тебе закрепить полученные знания на практике.
+						</p>
+					</li>
+					<li class="training__item">
+						<div class="training__item-icon-wrapper">
+							<svg class="training__item-icon" width="48" height="48">
+								<use xlink:href="./images/sprite.svg#training-4"></use>
+							</svg>
+						</div>
+
+						<h3 class="training__item-title">
+							Создатели нашей Академии
+						</h3>
+
+						<p class="training__item-desc">
+							Действующие селлеры с большим опытом в продажах на маркетплейсах, эксперты компании stat4market, а также профессиональные лекторы и методологи.
+						</p>
+					</li>
+				</ul>
+			</div><!-- /.training__content -->
+		</div><!-- /.container -->
+	</section><!-- /.training -->
+	<!-- /TRAINING -->
+</main>
+
+
+
+	<footer class="footer">
+	<div class="container">
+		<div class="footer__content">
+			<!--  -->
+		</div>
+	</div>
+</footer>
+</div><!-- ./wrapper -->
+
+
+<!-- SCRIPTS -->
+<script src="./js/main.js"></script>
+<!-- /SCRIPTS -->
+</body>
+
+</html>

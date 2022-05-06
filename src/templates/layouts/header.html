@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- STYLES -->
+
+	<link rel="stylesheet" href="./css/main.css">
+	<!-- /STYLES -->
+
+	<!-- SCRIPT -->
+	<script src="//unpkg.com/alpinejs" defer></script>
+	<!-- /SCRIPT -->
+
+	<!-- TITLE -->
+	<title>@@head_title</title>
+	<!-- /TITLE -->
+</head>
+
+<body x-data="{ active: false }" :style="{ overflow: active ? 'hidden' : 'auto'}">
+	<div class="wrapper">
+		@@include('./components/header.html')
